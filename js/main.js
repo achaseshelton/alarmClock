@@ -14,11 +14,14 @@ function updateTime ()  {
     var day = date.getDate();  //Sets the value of variable day to the current day value of variable date.
     var year = date.getFullYear();  //Sets the value of variable year to the current year value of variable date.
 
+    timeOfDay = hour < 12 ? "AM" : "PM"; //Sets the value of time of day to AM if the hours are less than 12 otherwise PM
+    hour = hour > 12 ? hour - 12 : hour; //If the value of hours is greater than 12 then it sets the value to hours minus 12.
     hour = hour < 10 ? "0" + hour : hour;  //Sets hours to have a "0" before hours if the value of hours in less than 10.
     minutes = minutes < 10 ? "0" + minutes : minutes;  //Sets minutes to have a "0" before minutes if the vaule of minutes is less than 10.
     seconds = seconds < 10 ? "0" + seconds : seconds;  //Sets seconds to have a "0" before seconds if the vaule of seconds is less than 10.
     
-    clockDiv.innerText = hour + ":" + minutes + ":" + seconds;  //The inner text of variable clockDiv is the value of the varibles hour, minutes, and seconds with ":" in between.
+    clockDiv.innerText = hour + ":" + minutes + ":" + seconds + " " + timeOfDay;
+    //The inner text of variable clockDiv is the value of the varibles hour, minutes, seconds, and timeOfDay.
     dateDiv.innerText = month + "/" + day + "/" + year;  //The inner text of  dateDiv is the value of variables month, day, and year seperated by "/"
 };
 
