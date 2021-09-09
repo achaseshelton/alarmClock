@@ -26,7 +26,7 @@ function setAlarm()  {
         var current = new Date;
         var timeToAlarm = new Date(alarmTime);
     }
-      if(alarmTime > current)  {
+      if(timeToAlarm > current)  {
           var timeout = timeToAlarm.getTime() - current.getTime();
           alarmTimeout = setTimeout(alert("Time to Wake Up!!"), timeout);
           alert("Alarm Set");
