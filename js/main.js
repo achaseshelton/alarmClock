@@ -29,10 +29,16 @@ function setAlarm()  {
       if(timeToAlarm > current)  {
           var timeout = timeToAlarm.getTime() - current.getTime();
           alarmTimeout = setTimeout(() => alert("Time to wake up!!!"), timeout);
-          alert("Alarm Set");
+          alert("Alarm Set!");
       };
 };
 
+function clearAlarm()  {
+    if(alarmTimeout)  {
+        clearTimeout(alarmTimeout);
+        alert("Alarm Cleared!")
+    }
+}
 
 
 setInterval(updateTime, 1000)
