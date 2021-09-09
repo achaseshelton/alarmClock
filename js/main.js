@@ -18,6 +18,7 @@ function updateTime ()  {
 
 function setAlarmTime(value)  {
     alarmTime = value;
+    console.log(alarmTime)
 };
 
 function setAlarm()  {
