@@ -1,4 +1,4 @@
-Create html file to showcase clock with time, date, and buttons to creat and clear an alarm
+Create html file to showcase clock with time, date, and buttons to create and clear an alarm
 
 Create a css file to style and make the alarm clock look presentable
 
