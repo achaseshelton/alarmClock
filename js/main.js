@@ -2,18 +2,24 @@ var alarmTime = null;  //Sets the value of variable alarmTime to nothing.
 var alarmTimeout = null;  //Sets the vaulue of variable alarmTimeout to nothing.
 
 function updateTime ()  {
-    var display = document.getElementById("clock");  //Sets the variable display to get the div "clock"
+    var clockDiv = document.getElementById("clock");  //Sets the variable clockDiv to get the div "clock"
+    var dateDiv = document.getElementById("date")  //Sets the variable dateDiv to get the div "date"
     var date = new Date();  //Sets the value of date to get the current date and time.
 
     var hour = date.getHours(); //Sets the value of variable hour to the current hour vaule in the variable date.
     var minutes = date.getMinutes();  //Sets the value of variable minutes to the current minutes value in the variable date.
     var seconds = date.getSeconds();  //Sets the vaule of variable seconds to the current seconds value of the variable date.
 
+    var month = date.getMonth()+1;
+    var day = date.getDate();
+    var year = date.getFullYear();
+
     hour = hour < 10 ? "0" + hour : hour;  //Sets hours to have a "0" before hours if the value of hours in less than 10.
     minutes = minutes < 10 ? "0" + minutes : minutes;  //Sets minutes to have a "0" before minutes if the vaule of minutes is less than 10.
     seconds = seconds < 10 ? "0" + seconds : seconds;  //Sets seconds to have a "0" before seconds if the vaule of seconds is less than 10.
     
-    display.innerText= hour + ":" + minutes + ":" + seconds  //The inner text of variable display is the value of the varibles hour, minutes, and seconds with ":" in between.
+    clockDiv.innerText = hour + ":" + minutes + ":" + seconds;  //The inner text of variable display is the value of the varibles hour, minutes, and seconds with ":" in between.
+    dateDiv.innerText = month + "/" + day + "/" + year;
 };
 
 function setAlarmTime(value)  {
