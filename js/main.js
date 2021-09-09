@@ -28,7 +28,7 @@ function setAlarm()  {
     };
       if(timeToAlarm > current)  {  //This runs if the variable timeToAlarm is greater than the variable current.
           var timeout = timeToAlarm.getTime() - current.getTime();  //Sets the value of variable timeout to the time of timeToAlarm minus the time of current variable.
-          alarmTimeout = setTimeout(() => alert("Time to wake up!!!"), timeout = 0);  // Sends an alert to wake up with the parameter of the timeout variable.
+          alarmTimeout = setTimeout(() => alert("Time to wake up!!!"), timeout);  // Sends an alert to wake up with the parameter of the timeout variable.
           alert("Alarm Set!");  //Alerts the user that an Alarm has been set.
       };
 };
