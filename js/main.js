@@ -18,13 +18,13 @@ function updateTime ()  {
 
 function setAlarmTime(value)  {
     alarmTime = value;
-    console.log(alarmTime)
+    console.log(alarmTime);
 };
 
 function setAlarm()  {
     if(alarmTime)  {
         var current = new Date;
-        var timeToAlarm = new date(alarmTime);
+        var timeToAlarm = new Date(alarmTime);
     }
       if(alarmTime > current)  {
           var timeout = timeToAlarm.getTime() - current.getTime();
