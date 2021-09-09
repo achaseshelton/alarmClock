@@ -13,3 +13,6 @@ Display the current time and date updating every second:
         6. Display the time using the variables for Hours : Minutes : Seconds.
     7. Set the interval for the update to update every 1000 miliseconds.
 
+Create an a function to set the alarm time.
+
+Create a function to set the alarm.

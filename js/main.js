@@ -25,13 +25,13 @@ function setAlarm()  {
     if(alarmTime)  {
         var current = new Date;
         var timeToAlarm = new Date(alarmTime);
-    }
+    };
       if(timeToAlarm > current)  {
           var timeout = timeToAlarm.getTime() - current.getTime();
-          alarmTimeout = setTimeout(alert("Time to Wake Up!!"), timeout);
+          alarmTimeout = setTimeout(() => alert("Time to wake up!!!"), timeout);
           alert("Alarm Set");
-      }
-}
+      };
+};
 
 
 
